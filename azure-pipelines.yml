@@ -10,13 +10,7 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-# - task: Npm@1
-#   inputs:
-#     command: 'install'
-- task: Npm@1
-  inputs:
-    command: 'install'
-    workingDir: './package.json'
+
 - task: FlutterInstall@0
   inputs:
     channel: 'stable'
