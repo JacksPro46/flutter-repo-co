@@ -12,14 +12,14 @@ pool:
 steps:
 - script: |
     git clone https://github.com/flutter/flutter.git -b stable
-    export FLUTTER_PATH="/home/vsts/work/1/s/flutter/bin/flutter"
+    export PATH="$PATH:/home/vsts/work/1/s/flutter/bin
     echo "printing the path of the flutter"
     echo $PATH
-    $FLUTTER_PATH --version
-    $FLUTTER_PATH pub get
-    $FLUTTER_PATH build apk
-    flutter config --no-analytics
-    flutter precache
+    # $FLUTTER_PATH --version
+    # $FLUTTER_PATH pub get
+    # $FLUTTER_PATH build apk
+    # flutter config --no-analytics
+    # flutter precache
   displayName: 'Install Flutter SDK'
 
 - script: flutter --version
