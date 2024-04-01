@@ -13,6 +13,7 @@ steps:
 - script: |
     git clone https://github.com/flutter/flutter.git -b stable
     export PATH="$PATH:`pwd`/flutter/bin"
+    echo "printing the path of the flutter"
     echo $PATH
     flutter config --no-analytics
     flutter precache
