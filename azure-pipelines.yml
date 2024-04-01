@@ -19,7 +19,7 @@ steps:
 - task: FlutterBuild@0
   inputs:
     target: 'apk'
-    projectDirectory: './pubspec.yaml'
+    projectDirectory: '.'
 
 - task: PublishBuildArtifacts@1
   inputs:
