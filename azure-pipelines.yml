@@ -46,6 +46,7 @@ stages:
 
 - stage: iOSBuild
   displayName: 'Build iOS'
+  condition: and(succeeded(), contains(Variables['Build.SourceBranch'], 'master'))
   jobs:
   - job: iOSJob
     pool:
