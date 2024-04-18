@@ -21,6 +21,11 @@ steps:
     target: 'apk'
     projectDirectory: '.'
 
+- task: FlutterBuild@0
+  inputs:
+    target: 'ipa'
+    projectDirectory: '.'
+    
 - task: CopyFiles@2
   inputs:
     SourceFolder: 'build/app/outputs/flutter-apk'
