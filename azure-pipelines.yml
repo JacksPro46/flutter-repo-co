@@ -2,11 +2,14 @@ trigger:
   branches:
     include:
     - master
-
+  paths:
+    include:
+      - 'android/*'
+      - 'ios/*'
 stages:
 - stage: Build_APK
   displayName: Android Build
-
+  condition: and(succeeded(), contains(variables['Build.SourceBranch'], 'master'), contains(variables['Build.SourceBranch'], 'android/'))
   jobs:
   - job: FlutterBuild
   
