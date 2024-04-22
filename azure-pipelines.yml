@@ -93,6 +93,11 @@ stages:
           mode: 'auto'
           channel: 'stable'
           version: 'latest'
+       - script: |
+           flutter clean
+           flutter pub get
+           flutter packages get
+         displayName: flutter_package_update 
        - task: FlutterBuild@0
          inputs:
            target: 'web'
