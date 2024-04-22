@@ -99,6 +99,6 @@ stages:
            projectDirectory: '.'
        - task: PublishBuildArtifacts@1
          inputs:
-           PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-           ArtifactName: 'drop'
+           PathtoPublish: 'build/web'
+           ArtifactName: 'drop-web'
            publishLocation: 'Container'
